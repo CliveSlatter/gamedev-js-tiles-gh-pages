@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://localhost:63342/psdlesson8/client/ben.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <title> Fetch Decode Execute Cycle </title>
+    <script>
+        function mark() {
+            document.getElementById('displayOutput').innerHTML = "Have another guess!"
+
+            var numberCorrect = 0;
+
+            if (document.getElementById('first').value === "Quick Sort") {
+                numberCorrect = numberCorrect + 1;
+            }
+            if (document.getElementById('second').value === "arr, pivotIndex+1, right") {
+                numberCorrect = numberCorrect + 1;
+            }
+
+            if (numberCorrect === 2) {
+                document.getElementById('displayOutput').innerHTML = "Congratulations!  You are correct.  Now revise something else!"
+            } else {
+                document.getElementById('displayOutput').innerHTML = "Number correct is " + numberCorrect
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1> Sorting Revision</h1>
+
+Below is a standard sorting algorithm. Fill in the blanks and click the MARK button to see how many you got right.
+
+<form>
+<pre>
+// this algorithm is called <input type="text" id="first">
+
+function quicksort(arr, left, right)
+    if (left &lt; right) then
+        pivotindex = partition (arr, left,  right)
+        quicksort(arr, left, pivotindex - 1) //quick sort left of pivot
+        quicksort( <input type="text" id="second">  )  //quick sort right of pivot
+    endif
+    return arr
+endFunction
+
+   etc etc
+
+
+</pre>
+</form>
+
+<button onclick="mark()">MARK ME</button>
+
+<p>
+</p><div id="displayOutput"></div>
+<p></p>
+
+
+</body></html>
